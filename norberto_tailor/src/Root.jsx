@@ -7,17 +7,12 @@ const RootFile = () => {
 
     return (
         <div>
-      <header>
+     
         <Header />
 
-
-      </header>
-      <main>
         <Outlet /> 
-      </main>
-      <footer>
-        <p>© 2024 Your E-commerce</p>
-      </footer>
+    
+      
     </div>
     )
 }

@@ -4,18 +4,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // components:
 import RootFile from './Root';
 import {lazy} from 'react';
+import Home from './components/Home'
 
-const Home = lazy(() => import('./components/Home'))
+// const Home = lazy(() => import('./components/Home'))
 
 const router = createBrowserRouter([
     {
         path:'/',
         element: <RootFile />,
         children: [
-            {path:'', element: <Suspense ><Home /></Suspense>},
-            {path:'', element: <Suspense ></Suspense>},
-            {path:'', element: <Suspense ></Suspense>},
-            {path:'', element: <Suspense ></Suspense>},
+            {path:'/', element: <Home />},
+           
         ]
     }
 ])
@@ -28,7 +27,11 @@ const router = createBrowserRouter([
 
 const App = () => {
     return(
-        <RouterProvider router={router} />
+        <>
+        <RouterProvider router={router}>
+        {router}
+        </RouterProvider>
+        </>
     )
 }
 
