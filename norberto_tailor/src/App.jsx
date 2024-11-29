@@ -4,9 +4,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // components:
 import RootFile from './Root';
 import {lazy} from 'react';
-import Home from './components/Home'
 
-// const Home = lazy(() => import('./components/Home'))
+const Home = lazy(() => import('./components/Home'))
+const Despre = lazy(() => import('./components/Despre'))
+const Produse = lazy(() => import('./components/Produse'))
+const Servicii = lazy(() => import('./components/Servicii'))
+const Cont = lazy(() => import('./components/Cont'))
+const Contact = lazy(() => import('./components/Contact'))
+
 
 const router = createBrowserRouter([
     {
@@ -14,6 +19,11 @@ const router = createBrowserRouter([
         element: <RootFile />,
         children: [
             {path:'/', element: <Home />},
+            {path:'about', element: <Despre />},
+            {path:'products', element: <Produse />},
+            {path:'services', element: <Servicii />},
+            {path:'acount', element: <Cont />},
+            {path:'contact', element: <Contact />},
            
         ]
     }
