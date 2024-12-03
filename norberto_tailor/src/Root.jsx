@@ -7,13 +7,15 @@ const RootFile = () => {
 
     return (
         <div>
-     
-        <Header />
+            <header>
+                <Header />
+            </header>
+            <main>
+                <Outlet />
+            </main>
 
-        <Outlet /> 
-    
-      
-    </div>
+
+        </div>
     )
 }
 

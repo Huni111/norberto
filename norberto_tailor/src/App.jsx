@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.css';
 
 // components:
 import RootFile from './Root';
-import {lazy} from 'react';
+import { lazy } from 'react';
 
 const Home = lazy(() => import('./components/Home'))
 const Despre = lazy(() => import('./components/Despre'))
@@ -15,16 +16,16 @@ const Contact = lazy(() => import('./components/Contact'))
 
 const router = createBrowserRouter([
     {
-        path:'/',
+        path: '/',
         element: <RootFile />,
         children: [
-            {path:'/', element: <Home />},
-            {path:'about', element: <Despre />},
-            {path:'products', element: <Produse />},
-            {path:'services', element: <Servicii />},
-            {path:'acount', element: <Cont />},
-            {path:'contact', element: <Contact />},
-           
+            { path: '/', element: <Home /> },
+            { path: 'about', element: <Despre /> },
+            { path: 'products', element: <Produse /> },
+            { path: 'services', element: <Servicii /> },
+            { path: 'acount', element: <Cont /> },
+            { path: 'contact', element: <Contact /> },
+
         ]
     }
 ])
@@ -36,11 +37,13 @@ const router = createBrowserRouter([
 
 
 const App = () => {
-    return(
+    return (
         <>
-        <RouterProvider router={router}>
-        {router}
-        </RouterProvider>
+   
+                <RouterProvider router={router}>
+                    {router}
+                </RouterProvider>
+            
         </>
     )
 }

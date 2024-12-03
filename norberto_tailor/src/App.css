@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F8EDD7;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 1rem;
+}
+
+header li a {
+    text-decoration: none;
+    color: #922C14;
+}
+
+
+body {
+    background-color: #E4CBC5;
+    
+}
+
+main {
+    padding: 0.8rem;
+}
