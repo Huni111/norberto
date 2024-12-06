@@ -40,4 +40,6 @@ body {
 
 main {
     padding: 0.8rem;
+    display: flex;
+    justify-content: center;
 }
